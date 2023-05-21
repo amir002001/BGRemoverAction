@@ -1,0 +1,28 @@
+name: remove background
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      image_url:
+        description: 'URL of the image'
+        required: true
+        default: 'https://picsum.photos/200/300'
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Download the image
+        runs:
+      - name: Open the image in Preview
+        runs:
+      - name: Use Applescript to remove background
+        runs:
